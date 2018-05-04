@@ -2153,7 +2153,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1fb186;
+  background: #0ff4ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3324,7 +3324,7 @@ pre {
   height: 24px;
   width: 24px;
   cursor: pointer;
-  background: url("https://yixiuer.oss-cn-shanghai.aliyuncs.com/Picture/wechat.svg");
+  background: url("http://p7vw4w30r.bkt.clouddn.com/wechat.svg");
   background-size: 24px 24px;
 }
 .weixin-hover {
