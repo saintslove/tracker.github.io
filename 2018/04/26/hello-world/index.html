@@ -257,7 +257,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">Thick and thin</p>
+        <p class="site-subtitle">thick and thin</p>
       
   </div>
 
@@ -574,10 +574,10 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
-        <div id="aplayer-OHuwfFMV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-PokVYYUf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":false,"showlrc":3,"mutex":true,"music":[{"title":"成都","author":"赵雷","url":"http://p7vw4w30r.bkt.clouddn.com/%E8%B5%B5%E9%9B%B7%20-%20%E6%88%90%E9%83%BD.mp3","pic":"http://p7vw4w30r.bkt.clouddn.com/%E6%88%90%E9%83%BD.jpg","lrc":"http://p7vw4w30r.bkt.clouddn.com/%E6%88%90%E9%83%BD_%E6%AD%8C%E8%AF%8D.lrc"}]};
-				  options.element = document.getElementById("aplayer-OHuwfFMV");
+				  options.element = document.getElementById("aplayer-PokVYYUf");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -682,6 +682,19 @@
       
 
       
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+				<div style="color: rgba(0, 0, 0, 0.75); font-size:13px; letter-spacing:3px">(&gt;看完记得五星好评哦亲&lt;)</div>
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
       
       
 
@@ -905,7 +918,7 @@ hrsold=setzero(Math.floor(e_hrsold));
 e_minsold=(e_hrsold-hrsold)*60;
 minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
 seconds=setzero(Math.floor((e_minsold-minsold)*60));
-document.getElementById('days').innerHTML="Running:  "+daysold+"天"+hrsold+"时"+minsold+"分"+seconds+"秒";
+document.getElementById('days').innerHTML="Shuttled:  "+daysold+"天"+hrsold+"时"+minsold+"分"+seconds+"秒";
 }
 function setzero(i){
 if (i<10)
@@ -915,9 +928,11 @@ return i;
 show_date_time();
 </script>
 
+			  
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 
 					src="//music.163.com/outchain/player?type=0&id=2179792198&auto=0&height=430">
 				</iframe>	
+				
             </div>
           
 	            
@@ -1603,6 +1618,23 @@ show_date_time();
 
   
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 11266,
+    el: 'wpac-rating',
+    color: 'f79533'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
   
