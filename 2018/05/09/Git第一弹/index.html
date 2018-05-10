@@ -169,7 +169,7 @@
 <meta property="og:description" content="获取/克隆仓库、检查文件状态、跟踪新文件、暂存已修改文件、忽略文件">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p7vw4w30r.bkt.clouddn.com/%E6%96%87%E4%BB%B6%E7%8A%B6%E6%80%81%E5%8F%98%E5%8C%96%E5%91%A8%E6%9C%9F.png">
-<meta property="og:updated_time" content="2018-05-10T05:42:50.344Z">
+<meta property="og:updated_time" content="2018-05-10T08:55:10.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git第一弹">
 <meta name="twitter:description" content="获取/克隆仓库、检查文件状态、跟踪新文件、暂存已修改文件、忽略文件">
@@ -450,7 +450,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-10T13:42:50+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-10T16:55:10+08:00">
                 2018-05-10
               </time>
             
@@ -516,7 +516,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,816
+                  1,819
                 </span>
               
 
@@ -557,8 +557,7 @@
       
 
       
-        <h2 id="1"><a href="#1" class="headerlink" title="1. "></a><span id="inline-toc"><em>1.</em></span> <em><span class="label primary">获取Git仓库</span></em></h2><h4 id="在现有目录中创建仓库"><a href="#在现有目录中创建仓库" class="headerlink" title="在现有目录中创建仓库 "></a><div class="note primary"><p>在现有目录中创建仓库 </p></div></h4><p>&ensp;若是管理现有项目，需在项目所在目录进行初始化操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure></p>
-<p>&ensp;该命令在项目所在目录生成隐含文件夹<code>.git</code>,包含初始化仓库必要文件，但项目文件并未被跟踪，因此还需跟踪这些文件并提交至仓库。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git commit -m<span class="string">'修改描述'</span></span><br></pre></td></tr></table></figure></p>
+        <h2 id="1"><a href="#1" class="headerlink" title="1. "></a><span id="inline-toc"><em>1.</em></span> <em><span class="label primary">获取Git仓库</span></em></h2><h4 id="在现有目录中创建仓库"><a href="#在现有目录中创建仓库" class="headerlink" title="在现有目录中创建仓库 "></a><div class="note primary"><p>在现有目录中创建仓库 </p></div></h4><p>&ensp;若是管理现有项目，需在项目所在目录通过命令<code>git init</code>进行初始化操作<br>，该命令在项目所在目录生成隐含文件夹<code>.git</code>，包含初始化仓库必要文件，但项目文件并未被跟踪，因此还需跟踪这些文件并提交至仓库。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git commit -m<span class="string">'修改描述'</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="克隆现有仓库"><a href="#克隆现有仓库" class="headerlink" title="克隆现有仓库 "></a><div class="note primary"><p>克隆现有仓库 </p></div></h4><p>&ensp;若想将一已存在仓库克隆值本地，需使用<code>git clone [url]</code>命令，该命令会将远程仓库每一个文件克隆至本地，对于Git可链接库<code>libgit2</code>，可通过日下如下命令实现远程克隆：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">clone</span> <span class="title">https</span>://github.com/libgit2/libgit2</span><br></pre></td></tr></table></figure></p>
 <p>&ensp;此时会在当前目录下创建名为<code>libgit2</code>的目录，并在该目录下初始化一个隐含的<code>.git</code>文件，远程仓库拉取的数据均存入<code>.git</code>文件，并从中读取最新版本的文件拷贝。<br>&ensp;若想将<code>libgit2</code>克隆至自定义的仓库<code>mylibgit</code>时，可使用如下命令：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">clone</span> <span class="title">https</span>://github.com/libgit2/libgit2 mylibgit</span><br></pre></td></tr></table></figure></p>
 <p>&ensp;本次使用的<code>https://</code>协议，Git同时支持多种传输协议，包括<code>git://</code>协议，<code>SSH</code>协议，比如<code>user@server:path/to/repo.git</code>，在服务器上搭建 Git将会介绍所有这些协议在服务器端如何配置使用，以及各种方式之间的利弊。</p>
@@ -625,7 +624,7 @@ ub/gitignore" target="_blank" rel="noopener">.gitignore文件列表</a>：</p>
   <p><span>本文标题:</span><a href="/2018/05/09/Git第一弹/">Git第一弹</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Fox Mask 的个人博客">Fox Mask</a></p>
   <p><span>发布时间:</span>2018年05月09日 - 17:05</p>
-  <p><span>最后更新:</span>2018年05月10日 - 13:05</p>
+  <p><span>最后更新:</span>2018年05月10日 - 16:05</p>
   <p><span>原始链接:</span><a href="/2018/05/09/Git第一弹/" title="Git第一弹">https://www.saintslove.top/2018/05/09/Git第一弹/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.saintslove.top/2018/05/09/Git第一弹/"  aria-label="复制成功！"></i></span>
   </p>
@@ -714,6 +713,10 @@ ub/gitignore" target="_blank" rel="noopener">.gitignore文件列表</a>：</p>
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/10/Git第二弹/" rel="prev" title="Git第二弹">
+                <i class="fa fa-chevron-left"></i> Git第二弹
+              </a>
             
           </div>
 
@@ -817,7 +820,7 @@ ub/gitignore" target="_blank" rel="noopener">.gitignore文件列表</a>：</p>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1023,7 +1026,7 @@ show_date_time();
 
   <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">1.9k</span>
+  <span class="post-count">3.1k</span>
  </div>
 
 </div>
