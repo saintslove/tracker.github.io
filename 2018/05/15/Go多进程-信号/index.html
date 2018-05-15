@@ -147,7 +147,7 @@
 
 
 
-  <meta name="keywords" content="top,文章阅读量排行榜" />
+  <meta name="keywords" content="go,signal," />
 
 
 
@@ -160,18 +160,18 @@
 
 
 
-<meta name="description" content="AV.initialize(&quot;jVWtke4bCYy9y7EvWfQ769gu-gzGzoHsz&quot;, &quot;E0F5KSjyocvetOeMDfEvGFo8&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.d">
-<meta name="keywords" content="top,文章阅读量排行榜">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TopX">
-<meta property="og:url" content="https://www.saintslove.top/top/index.html">
+<meta name="description" content="&amp;ensp;完整示例程序 &amp;ensp;os.Signal接口类型如下： 1234567// A Signal represents an operating system signal.// The usual underlying implementation is operating system-dependent:// on Unix it is syscall.Signal.type S">
+<meta name="keywords" content="go,signal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go多进程---信号">
+<meta property="og:url" content="https://www.saintslove.top/2018/05/15/Go多进程-信号/index.html">
 <meta property="og:site_name" content="Fox Mask">
-<meta property="og:description" content="AV.initialize(&quot;jVWtke4bCYy9y7EvWfQ769gu-gzGzoHsz&quot;, &quot;E0F5KSjyocvetOeMDfEvGFo8&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.d">
+<meta property="og:description" content="&amp;ensp;完整示例程序 &amp;ensp;os.Signal接口类型如下： 1234567// A Signal represents an operating system signal.// The usual underlying implementation is operating system-dependent:// on Unix it is syscall.Signal.type S">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-09T04:14:48.388Z">
+<meta property="og:updated_time" content="2018-05-15T14:22:46.326Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TopX">
-<meta name="twitter:description" content="AV.initialize(&quot;jVWtke4bCYy9y7EvWfQ769gu-gzGzoHsz&quot;, &quot;E0F5KSjyocvetOeMDfEvGFo8&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id&apos;,0);   query.d">
+<meta name="twitter:title" content="Go多进程---信号">
+<meta name="twitter:description" content="&amp;ensp;完整示例程序 &amp;ensp;os.Signal接口类型如下： 1234567// A Signal represents an operating system signal.// The usual underlying implementation is operating system-dependent:// on Unix it is syscall.Signal.type S">
 
 
 
@@ -201,14 +201,14 @@
 
 
 
-  <link rel="canonical" href="https://www.saintslove.top/top/"/>
+  <link rel="canonical" href="https://www.saintslove.top/2018/05/15/Go多进程-信号/"/>
 
 
 
 
 
 
-  <title>TopX | Fox Mask</title>
+  <title>Go多进程---信号 | Fox Mask</title>
   
 
 
@@ -389,56 +389,337 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.saintslove.top/2018/05/15/Go多进程-信号/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fox Mask">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blog_logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fox Mask">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">TopX</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <blockquote class="blockquote-center"><p><div id="top"></div></p>
-<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-<script>AV.initialize("jVWtke4bCYy9y7EvWfQ769gu-gzGzoHsz", "E0F5KSjyocvetOeMDfEvGFo8");</script>
-<script type="text/javascript">
-  var time=0
-  var title=""
-  var url=""
-  var query = new AV.Query('Counter');
-  query.notEqualTo('id',0);
-  query.descending('time');
-  query.limit(1000);
-  query.find().then(function (todo) {
-    for (var i=0;i<1000;i++){
-      var result=todo[i].attributes;
-      time=result.time;
-      title=result.title;
-      url=result.url;
-      var content="<a href='"+"http://www.saintslove.top"+url+"'>"+"<li>"+"<font color='blue' size='5'>"+title+"</font>"+"</li>"+"</a>"+"<li>"+"<font color='red' size='3'>"+"热度："+time+"℃"+"</font>"+"</li>"+"<br/>";
-      document.getElementById("top").innerHTML+=content
-    }
-  }, function (error) {
-    console.log("error");
-  });
-</script></blockquote>
+          <h1 class="post-title" itemprop="name headline">Go多进程---信号</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T20:52:32+08:00">
+                2018-05-15
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-15T22:22:46+08:00">
+                2018-05-15
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/go-signal/" itemprop="url" rel="index">
+                    <span itemprop="name">go-signal</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/05/15/Go多进程-信号/" class="leancloud_visitors" data-flag-title="Go多进程---信号">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,261
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>&ensp;<a href="https://github.com/saintslove/example.v2/blob/master/src/gopcp.v2/chapter3/signal/signal.go" target="_blank" rel="noopener">完整示例程序</a></p>
+<p>&ensp;<code>os.Signal</code>接口类型如下：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A Signal represents an operating system signal.</span></span><br><span class="line"><span class="comment">// The usual underlying implementation is operating system-dependent:</span></span><br><span class="line"><span class="comment">// on Unix it is syscall.Signal.</span></span><br><span class="line"><span class="keyword">type</span> Signal <span class="keyword">interface</span> &#123;</span><br><span class="line">    <span class="built_in">String</span>() <span class="built_in">string</span></span><br><span class="line">    Signal() <span class="comment">// to distinguish from other Stringers</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&ensp;<code>Signal</code>方法没有实际意义，仅作为区别其他信号的标识，在GO标准库中，所有实现此接口类型的值均可作为操作系统信号。操作系统信号量类型均为<code>syscall.Sinal</code>,其为<code>os.Signal</code>接口的实现类，每一个信号常量均为隐含式整数，其整数值与所在操作系统代表的信号常量编号一致。</p>
+<p>&ensp;<code>Notify</code>函数用于监控操作系统向当前进程所发的指定信号，其实现如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Notify causes package signal to relay incoming signals to c.</span></span><br><span class="line"><span class="comment">// If no signals are provided, all incoming signals will be relayed to c.</span></span><br><span class="line"><span class="comment">// Otherwise, just the provided signals will.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Package signal will not block sending to c: the caller must ensure</span></span><br><span class="line"><span class="comment">// that c has sufficient buffer space to keep up with the expected</span></span><br><span class="line"><span class="comment">// signal rate. For a channel used for notification of just one signal value,</span></span><br><span class="line"><span class="comment">// a buffer of size 1 is sufficient.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// It is allowed to call Notify multiple times with the same channel:</span></span><br><span class="line"><span class="comment">// each call expands the set of signals sent to that channel.</span></span><br><span class="line"><span class="comment">// The only way to remove signals from the set is to call Stop.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// It is allowed to call Notify multiple times with different channels</span></span><br><span class="line"><span class="comment">// and the same signals: each channel receives copies of incoming</span></span><br><span class="line"><span class="comment">// signals independently.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Notify</span><span class="params">(c <span class="keyword">chan</span>&lt;- os.Signal, sig ...os.Signal)</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> c == <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="built_in">panic</span>(<span class="string">"os/signal: Notify using nil channel"</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    handlers.Lock()</span><br><span class="line">    <span class="keyword">defer</span> handlers.Unlock()</span><br><span class="line"></span><br><span class="line">    h := handlers.m[c]</span><br><span class="line">    <span class="keyword">if</span> h == <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> handlers.m == <span class="literal">nil</span> &#123;</span><br><span class="line">            handlers.m = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">chan</span>&lt;- os.Signal]*handler)</span><br><span class="line">        &#125;</span><br><span class="line">        h = <span class="built_in">new</span>(handler)</span><br><span class="line">        handlers.m[c] = h</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    add := <span class="function"><span class="keyword">func</span><span class="params">(n <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">        <span class="keyword">if</span> n &lt; <span class="number">0</span> &#123;</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> !h.want(n) &#123;</span><br><span class="line">            h.set(n)</span><br><span class="line">            <span class="keyword">if</span> handlers.ref[n] == <span class="number">0</span> &#123;</span><br><span class="line">                enableSignal(n)</span><br><span class="line">            &#125;</span><br><span class="line">            handlers.ref[n]++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(sig) == <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> n := <span class="number">0</span>; n &lt; numSig; n++ &#123;</span><br><span class="line">            add(n)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> _, s := <span class="keyword">range</span> sig &#123;</span><br><span class="line">            add(signum(s))</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&ensp;参量<code>c chan&lt;- os.Signal</code>为发送通道，即仅可想其发送<code>os.Signal</code>类型的信号，参量<code>sig ...os.Signal</code>即为自定义信号量集合，当该参量为空，表示所有接收的常量信号均为自定义信号，逐一封装并存入<code>c chan&lt;- os.Signal</code>通道,coder如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(sig) == <span class="number">0</span> &#123;</span><br><span class="line">       <span class="keyword">for</span> n := <span class="number">0</span>; n &lt; numSig; n++ &#123;</span><br><span class="line">           add(n)</span><br><span class="line">       &#125;</span><br><span class="line">   &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">       <span class="keyword">for</span> _, s := <span class="keyword">range</span> sig &#123;</span><br><span class="line">           add(signum(s))</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>&ensp;<code>Notify</code>函数以<code>c chan&lt;- os.Signal</code>接收通道为唯一标识符处理相应的信号集合，源码中信号集合字典<code>m map[chan&lt;- os.Signal]*handler</code>以signal接受通道及信号集合变体为键值对，若该键值对不存在，则注册信号接收申请，否则更新相应的键值对，coder如下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">h := handlers<span class="selector-class">.m</span>[c]</span><br><span class="line">   <span class="keyword">if</span> h == nil &#123;</span><br><span class="line">       <span class="keyword">if</span> handlers<span class="selector-class">.m</span> == nil &#123;</span><br><span class="line">           handlers<span class="selector-class">.m</span> = make(map[chan&lt;- os.Signal]*handler)</span><br><span class="line">       &#125;</span><br><span class="line">       h = new(handler)</span><br><span class="line">       handlers<span class="selector-class">.m</span>[c] = h</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>&ensp;若自定义信号量为<code>syscall.SIGQUIT</code>及<code>syscall.SIGINT</code>，示例如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sigRecv1 := <span class="built_in">make</span>(<span class="keyword">chan</span> os.Signal, <span class="number">1</span>)</span><br><span class="line">sigs1 := []os.Signal&#123;syscall.SIGINT, syscall.SIGQUIT&#125;</span><br><span class="line">fmt.Printf(<span class="string">"Set notification for %s... [sigRecv1]\n"</span>, sigs1)</span><br><span class="line">signal.Notify(sigRecv1, sigs1...)</span><br><span class="line">fmt.Println(<span class="string">"Wait for 2 seconds... "</span>)</span><br><span class="line">time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">fmt.Printf(<span class="string">"Stop notification..."</span>)</span><br><span class="line"><span class="keyword">for</span> _, sig := <span class="keyword">range</span> sigRecv1&#123;</span><br><span class="line">    fmt.Printf(<span class="string">"Receive a signal:%s\n"</span>,sig)</span><br><span class="line">&#125;</span><br><span class="line">signal.Stop(sigRecv1)</span><br><span class="line"><span class="built_in">close</span>(sigRecv1)</span><br></pre></td></tr></table></figure>
+<p>&ensp;<code>Stop</code>函数用于恢复系统对其默认操作，其声明如下,但其signal接受通道参量必须与<code>Notify</code>函数signal信号接收通道为同一参量，调用之后signal接受通道不在接收任何常量信号，会导致示例中<code>for</code>语句阻塞，为此，可通过<code>close</code>函数关闭signal接收通道</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// <span class="keyword">Stop</span> causes <span class="keyword">package</span> signal <span class="keyword">to</span> <span class="keyword">stop</span> relaying incoming signals <span class="keyword">to</span> c.</span><br><span class="line">// It undoes the effect <span class="keyword">of</span> all <span class="keyword">prior</span> calls <span class="keyword">to</span> Notify <span class="keyword">using</span> c.</span><br><span class="line">// <span class="keyword">When</span> <span class="keyword">Stop</span> <span class="keyword">returns</span>, it <span class="keyword">is</span> guaranteed that c will receive <span class="keyword">no</span> more signals.</span><br><span class="line">func <span class="keyword">Stop</span>(c chan&lt;- os.Signal)</span><br><span class="line"></span><br><span class="line">// The <span class="keyword">close</span> built-<span class="keyword">in</span> <span class="keyword">function</span> closes a channel, which must be either</span><br><span class="line">// bidirectional <span class="keyword">or</span> send-only. It should be executed <span class="keyword">only</span> <span class="keyword">by</span> the sender,</span><br><span class="line">// <span class="keyword">never</span> the receiver, <span class="keyword">and</span> has the effect <span class="keyword">of</span> shutting down the channel <span class="keyword">after</span></span><br><span class="line">// the <span class="keyword">last</span> sent <span class="keyword">value</span> <span class="keyword">is</span> received. <span class="keyword">After</span> the <span class="keyword">last</span> <span class="keyword">value</span> has been received</span><br><span class="line">// <span class="keyword">from</span> a closed channel c, <span class="keyword">any</span> receive <span class="keyword">from</span> c will succeed <span class="keyword">without</span></span><br><span class="line">// blocking, <span class="keyword">returning</span> the zero <span class="keyword">value</span> <span class="keyword">for</span> the channel element. The <span class="keyword">form</span></span><br><span class="line">//  x, ok := &lt;-c</span><br><span class="line">// will also <span class="keyword">set</span> ok <span class="keyword">to</span> <span class="literal">false</span> <span class="keyword">for</span> a closed channel.</span><br><span class="line">func <span class="keyword">close</span>(c chan&lt;- <span class="keyword">Type</span>)</span><br></pre></td></tr></table></figure>
+<p>&ensp;若前后signal接受通道不同，signal处理程序会视为两个完全不同的操作，其实际效果如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sigRecv1 := <span class="built_in">make</span>(<span class="keyword">chan</span> os.Signal, <span class="number">1</span>)</span><br><span class="line">sigs1 := []os.Signal&#123;syscall.SIGINT, syscall.SIGQUIT&#125;</span><br><span class="line">fmt.Printf(<span class="string">"Set notification for %s... [sigRecv1]\n"</span>, sigs1)</span><br><span class="line">signal.Notify(sigRecv1, sigs1...)</span><br><span class="line">   </span><br><span class="line">sigRecv2 := <span class="built_in">make</span>(<span class="keyword">chan</span> os.Signal, <span class="number">1</span>)</span><br><span class="line">sigs2 := []os.Signal&#123;syscall.SIGQUIT&#125;</span><br><span class="line">fmt.Printf(<span class="string">"Set notification for %s... [sigRecv2]\n"</span>, sigs2)</span><br><span class="line">signal.Notify(sigRecv2, sigs2...)</span><br></pre></td></tr></table></figure>
+<p>&ensp;<code>for</code>语句的阻塞会影响程序的并发运行，需要通过<code>go chan</code>协程，同时为保障主程序在并发执行程序完成后退出，需要通过<code>WaitGroup</code>保障，示例如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">sigRecv1 := <span class="built_in">make</span>(<span class="keyword">chan</span> os.Signal, <span class="number">1</span>)</span><br><span class="line">sigs1 := []os.Signal&#123;syscall.SIGINT, syscall.SIGQUIT&#125;</span><br><span class="line">fmt.Printf(<span class="string">"Set notification for %s... [sigRecv1]\n"</span>, sigs1)</span><br><span class="line">signal.Notify(sigRecv1, sigs1...)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> wg sync.WaitGroup</span><br><span class="line">wg.Add(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> sig := <span class="keyword">range</span> sigRecv1 &#123;</span><br><span class="line">        fmt.Printf(<span class="string">"Received a signal from sigRecv1: %s\n"</span>, sig)</span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Printf(<span class="string">"End. [sigRecv1]\n"</span>)</span><br><span class="line">    wg.Done()</span><br><span class="line">&#125;()</span><br><span class="line"></span><br><span class="line">signal.Stop(sigRecv1)</span><br><span class="line"><span class="built_in">close</span>(sigRecv1)</span><br><span class="line">fmt.Printf(<span class="string">"done. [sigRecv1]\n"</span>)</span><br><span class="line">wg.Wait()</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
     
     
+
+	<div>
+	   
+		  <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+	   
+    </div>
+	
+	<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/05/15/Go多进程-信号/">Go多进程---信号</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Fox Mask 的个人博客">Fox Mask</a></p>
+  <p><span>发布时间:</span>2018年05月15日 - 20:05</p>
+  <p><span>最后更新:</span>2018年05月15日 - 22:05</p>
+  <p><span>原始链接:</span><a href="/2018/05/15/Go多进程-信号/" title="Go多进程---信号">https://www.saintslove.top/2018/05/15/Go多进程-信号/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.saintslove.top/2018/05/15/Go多进程-信号/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+      
+	</div>
+	
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持，成就梦想！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Fox Mask 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Fox Mask 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/go/" rel="tag"><i class="fa fa-tag"></i> go</a>
+          
+            <a href="/tags/signal/" rel="tag"><i class="fa fa-tag"></i> signal</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+				<div style="color: rgba(0, 0, 0, 0.75); font-size:13px; letter-spacing:3px">(&gt;看完记得五星好评哦亲&lt;)</div>
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/11/Go语法日志/" rel="next" title="GO进程管理">
+                GO进程管理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5aed1210cfd70d5a" async = "async" ></script>
+</div>
+
+      
+    </div>
   </div>
 
 
@@ -447,6 +728,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNjA2OC8xMjYwMw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -850,6 +1140,17 @@ show_date_time();
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
@@ -1301,6 +1602,23 @@ show_date_time();
 
   
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 11273,
+    el: 'wpac-rating',
+    color: 'f79533'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
   
