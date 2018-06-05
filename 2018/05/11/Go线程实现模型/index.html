@@ -177,7 +177,8 @@
 <meta property="og:image" content="http://p7vw4w30r.bkt.clouddn.com/go%E7%BA%BF%E7%A8%8B%E5%AE%9E%E7%8E%B0%E6%A8%A1%E5%9E%8B.png">
 <meta property="og:image" content="http://p7vw4w30r.bkt.clouddn.com/P%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2.png">
 <meta property="og:image" content="http://p7vw4w30r.bkt.clouddn.com/G%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2.png">
-<meta property="og:updated_time" content="2018-06-04T00:41:09.929Z">
+<meta property="og:image" content="http://p7vw4w30r.bkt.clouddn.com/%E4%B8%80%E8%BD%AE%E8%B0%83%E5%BA%A6%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
+<meta property="og:updated_time" content="2018-06-04T07:26:32.087Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="“Go线程实现模型”">
 <meta name="twitter:description" content="“Go线程实现模型”">
@@ -456,7 +457,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-04T08:41:09+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-04T15:26:32+08:00">
                 2018-06-04
               </time>
             
@@ -522,7 +523,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,041
+                  1,287
                 </span>
               
 
@@ -538,7 +539,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  5
                 </span>
               
             </div>
@@ -587,6 +588,15 @@
 <li>&ensp;<span id="inline-orange">G:</span>&ensp;&ensp;&ensp;用于封装一个Go代码片段，P与G是一对多关系。go语句的调用实际是系统对内部函数newproc的调用，系统通过从P或调度器的自由列表中抽取一个G用于封装go函数，随后将其放入全局G列表(runtime.allgs),该列表存放当前系统中所有G指针。运行时系统对其进行一次初始化，并存储待本地P的runnnext字段，若该字段已存在G，则将该G对象存入本地P可运行G列表，若该队列已满，则存于调度器的可运行G队列。</li>
 </ul>
 <p><img src="http://p7vw4w30r.bkt.clouddn.com/G%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2.png" alt="G状态装换"></p>
+<h3 id="调度器模型"><a href="#调度器模型" class="headerlink" title="调度器模型"></a><div class="note primary"><p>调度器模型</p></div></h3><p><img src="http://p7vw4w30r.bkt.clouddn.com/%E4%B8%80%E8%BD%AE%E8%B0%83%E5%BA%A6%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="一轮调度流程图"></p>
+<ul>
+<li><p>&ensp;在引导程序的初始化时main函数运行的前提，最后阶段，引导程序会促使调度器进行一轮调度，使封装了main函数的G组件得以运行。</p>
+</li>
+<li><p>&ensp;当调度器在一轮调度之初发现当前M已与某个G锁定，会立刻停止调度并停用(阻塞)该M，这会导致相关的内核线程不得做其他工作，调度器亦不会为当前M寻找可运行G，相当于浪费计算资源；相应的，若调度器找到的可运行G已与某个M锁定，其会唤醒该M以运行锁定的G，并重新为当前M寻找可运行G。</p>
+</li>
+<li><p>&ensp;当运行遇到串行任务，或等待与之锁定的G，调度器会停止执行调度任务，即阻塞停止当前M直至该串行任务执行完成，此后该M会被再次唤醒，开始新一轮的调度。</p>
+</li>
+</ul>
 
       
     </div>
@@ -616,7 +626,7 @@
   <p><span>本文标题:</span><a href="/2018/05/11/Go线程实现模型/">“Go线程实现模型”</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Fox Mask 的个人博客">Fox Mask</a></p>
   <p><span>发布时间:</span>2018年05月11日 - 14:05</p>
-  <p><span>最后更新:</span>2018年06月04日 - 08:06</p>
+  <p><span>最后更新:</span>2018年06月04日 - 15:06</p>
   <p><span>原始链接:</span><a href="/2018/05/11/Go线程实现模型/" title="“Go线程实现模型”">https://www.saintslove.top/2018/05/11/Go线程实现模型/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.saintslove.top/2018/05/11/Go线程实现模型/"  aria-label="复制成功！"></i></span>
   </p>
@@ -714,8 +724,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/11/Go语法日志/" rel="next" title="“Go线程实现模型”">
-                “Go线程实现模型” <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/10/Git第二弹/" rel="next" title="Git第二弹">
+                Git第二弹 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -810,7 +820,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -980,7 +990,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程的状态"><span class="nav-number">1.</span> <span class="nav-text">进程的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的状态"><span class="nav-number">2.</span> <span class="nav-text">线程的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程运行队列内部结构示意图"><span class="nav-number">3.</span> <span class="nav-text">线程运行队列内部结构示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程实现模型"><span class="nav-number">4.</span> <span class="nav-text">线程实现模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1"><span class="nav-number">4.1.</span> <span class="nav-text">1. 用户级线程模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2"><span class="nav-number">4.2.</span> <span class="nav-text">2. 内核级线程模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3"><span class="nav-number">4.3.</span> <span class="nav-text">3. 两级线程模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程实现模型详解"><span class="nav-number">5.</span> <span class="nav-text">线程实现模型详解</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程的状态"><span class="nav-number">1.</span> <span class="nav-text">进程的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的状态"><span class="nav-number">2.</span> <span class="nav-text">线程的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程运行队列内部结构示意图"><span class="nav-number">3.</span> <span class="nav-text">线程运行队列内部结构示意图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程实现模型"><span class="nav-number">4.</span> <span class="nav-text">线程实现模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1"><span class="nav-number">4.1.</span> <span class="nav-text">1. 用户级线程模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2"><span class="nav-number">4.2.</span> <span class="nav-text">2. 内核级线程模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3"><span class="nav-number">4.3.</span> <span class="nav-text">3. 两级线程模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程实现模型详解"><span class="nav-number">5.</span> <span class="nav-text">线程实现模型详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调度器模型"><span class="nav-number">6.</span> <span class="nav-text">调度器模型</span></a></li></ol></div>
             
 
           </div>
@@ -1016,7 +1026,7 @@ show_date_time();
 
   <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">6.7k</span>
+  <span class="post-count">5.6k</span>
  </div>
 
 </div>
